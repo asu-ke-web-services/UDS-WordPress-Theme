@@ -26,6 +26,7 @@ $asu_wp2020_includes = array(
 	'/advanced-custom-fields.php',          // Load integrated ACF plugin.
 	'/class-wp-bootstrap-navwalker.php',    // Load custom WordPress nav walker. Trying to get deeper navigation? Check out: https://github.com/understrap/understrap/issues/567.
 	'/editor.php',                          // Load Editor functions.
+	'/blur-images-missing-alt-tag.php',     // Load A11y Image Blur css in editor (blur images missing alt tags).
 	'/deprecated.php',                      // Load deprecated functions.
 );
 

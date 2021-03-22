@@ -34,6 +34,7 @@ $uds_wp_includes = array(
 	'/uds-blocks.php',                           // Custom blocks created with ACF Pro.
 	'/deprecated.php',                           // Load deprecated functions.
 	'/uds-contextual-help.php',                  // theme-specific context-senstive help tabs.
+	'/render-block-core-latest-posts.php',       // Rewrite the native block "latest posts".
 );
 
 foreach ( $uds_wp_includes as $file ) {

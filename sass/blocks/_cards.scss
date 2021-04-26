@@ -1,0 +1,14 @@
+// Remove default styling for elements inside a hover card link.
+.card-hover {
+	// Remove text decoration completely.
+	a {
+		text-decoration: none;
+	}
+
+	// Hover cards should only have titles, text, and icon.
+	// Remove link colors on those items.
+	p, h3, svg {
+		color: $uds-color-base-gray-7;
+	}
+
+}

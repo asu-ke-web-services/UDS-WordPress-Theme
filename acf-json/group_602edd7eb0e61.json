@@ -227,6 +227,29 @@
             "ui_off_text": ""
         },
         {
+            "key": "field_607085e8f21e3",
+            "label": "Hover Link",
+            "name": "card_hover_link",
+            "type": "link",
+            "instructions": "The text of this link will not be used, only the URL.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_603d52a9b2db1",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
             "key": "field_602f0c58aff5b",
             "label": "Date and Time",
             "name": "",
@@ -585,5 +608,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Fields for creating static, but customizable, versions of all UDS card types: standard, story, degree, and event.",
-    "modified": 1618008714
+    "modified": 1618000722
 }

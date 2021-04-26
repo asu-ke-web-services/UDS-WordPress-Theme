@@ -106,10 +106,11 @@ position:relative;
 }
 
 /*--------------------------------------------------------------
- ACF Button block
+ Prevent certain links from working on the admin side.
 --------------------------------------------------------------*/
 .acf-block-preview .uds-button a,
-.acf-block-preview .card-button a{
+.acf-block-preview .card-button a,
+.acf-block-preview a.hover-card-link {
 	pointer-events: none;
 }
 

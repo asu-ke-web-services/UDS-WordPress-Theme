@@ -34,9 +34,10 @@ $uds_wp_includes = array(
 	'/uds-blocks.php',                           // Custom blocks created with ACF Pro.
 	'/deprecated.php',                           // Load deprecated functions.
 	'/uds-contextual-help.php',                  // theme-specific context-senstive help tabs.
-	'/tiny-mce.php',                              // Create custom toolbars for the WYSIWYG editor in ACF.
+	'/tiny-mce.php',                             // Create custom toolbars for the WYSIWYG editor in ACF.
 	'/scroll-to-div.php',                        // Add animation to anchore scroll and offset -150.
-	'/news-post-type.php',                        // Create a custom post type for News.
+	'/news-post-type.php',                       // Create a custom post type for News.
+	'/wp-api-featured-image.php',                // Insert Featured Images into WP-REST API posts.
 );
 
 foreach ( $uds_wp_includes as $file ) {

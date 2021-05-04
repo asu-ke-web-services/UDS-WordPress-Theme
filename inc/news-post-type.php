@@ -5,6 +5,8 @@
  * @package uds-wordpress-theme
  */
 
+// phpcs:disable WPThemeReview.PluginTerritory.ForbiddenFunctions.plugin_territory_register_post_type, WPThemeReview.PluginTerritory.ForbiddenFunctions.plugin_territory_flush_rewrite_rules
+
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
@@ -35,7 +37,7 @@ if ( ! function_exists( 'create_news_post_type' ) ) {
 				'supports'              => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'post-formats' ),
 			)
 		);
-flush_rewrite_rules();
+		flush_rewrite_rules();
 
 	}
 	add_action( 'init', 'create_news_post_type' );

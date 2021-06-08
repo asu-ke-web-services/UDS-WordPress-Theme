@@ -38,6 +38,12 @@ if ( ! function_exists( 'uds_wp_scripts' ) ) {
 		$js_overlay_card_version = $theme_version . '.' . filemtime( get_template_directory() . '/js/overlay-card.js' );
 		wp_enqueue_script( 'uds-wordpress-overlay-card-scripts', get_template_directory_uri() . '/js/overlay-card.js', array(), $js_overlay_card_version, true );
 
+		$js_play_button_version = $theme_version . '.' . filemtime( get_template_directory() . '/js/play-button.js' );
+		wp_enqueue_script( 'uds-wordpress-play-button-scripts', get_template_directory_uri() . '/js/play-button.js', array(), $js_play_button_version, true );
+
+		$js_play_button_version2 = $theme_version . '.' . filemtime( get_template_directory() . '/js/tabs.js' );
+		wp_enqueue_script( 'uds-wordpress-play-button-scripts2', get_template_directory_uri() . '/js/tabs.js', array(), $js_play_button_version2, true );
+
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}

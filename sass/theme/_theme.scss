@@ -398,3 +398,110 @@ Override the desktop media query for header to fix the gap issue
 	top: 46px !important;
 }
 }
+
+/*--------------------------------------------------------------
+Video tabs
+--------------------------------------------------------------*/
+
+.side-tabs{
+	height: 100%;
+	.nav-tabs {
+		border-bottom: unset;
+		.nav-item.show .nav-link,
+		 .nav-link.active {
+			color: #191919!important;
+		border-bottom: 4px solid #ffc627!important;
+			border-color:rgba(0,0,0,.125);
+		}
+		.nav-link:hover{
+			color: #000;
+		}
+		.nav-link {
+			width: 100%;
+			transition:0.3s;
+			border: 1px solid rgba(0,0,0,.125);
+			padding: 30px 32px;
+			color: #BFBFBF;
+			&:not(:last-child) {
+				margin-bottom: 25px;
+			}
+		}
+
+	}
+	.tab-pane {
+		position: relative;
+		height: inherit;
+		iframe{
+		width: 100%;
+		height: inherit;
+	}
+	img{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.btn.btn-circle.btn-circle-alt-white{
+		background: #ffffff92;
+		border: 1px solid #D0D0D0;
+		svg{
+
+		    padding-left: 2px;
+		    opacity: 0.8;
+
+		}
+
+	}
+	.btn{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		z-index: 9;
+		transform: translate(-50%, -50%);
+	}
+}
+.card.tab-content{
+	border: 0;
+	background-color: unset;
+}
+.tab-content .tab-pane:after {
+    content: "";
+    background: -webkit-gradient(linear,left top,left bottom,from(#19191900),to(#191919c9));
+    background: -webkit-linear-gradient(top,#19191900 60%,#191919c9 100%);
+    background: -moz-linear-gradient(top,#19191900 60%,#191919c9 100%);
+    background: -o-linear-gradient(top,#19191900 60%,#191919c9 100%);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(60%,#19191900),to(#191919c9));
+    background: linear-gradient(
+180deg
+,#19191900 60%,#191919c9 100%);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+}
+
+.no-gradient-bg:after{
+	display:none;
+}
+@media(max-width:$uds-breakpoint-sm){
+	.tab-content.card{
+		display: block;
+		height:350px;
+		margin-top:25px;
+	}
+}
+a.scroll-control-prev,
+a.scroll-control-next{
+	display: none;
+}
+
+.card:not(.card.card-foldable)>div:first-of-type:not(.card-image-content){
+	padding-top: 0;
+}
+.tab-content{
+	padding: 0;
+}
+.card>div:last-child{
+	padding-bottom: 0;
+}
+}

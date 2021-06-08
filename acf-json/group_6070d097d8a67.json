@@ -1,0 +1,181 @@
+{
+    "key": "group_6070d097d8a67",
+    "title": "UDS Block: Tabs",
+    "fields": [
+        {
+            "key": "field_60749266d6b60",
+            "label": "Tabs style",
+            "name": "tabs_style",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "regular_horizonal": "Regular tabs",
+                "video_tabs": "Video tabs",
+                "dark_background": "Dark background",
+                "gray_background": "Gray background",
+                "accordion": "Accordion"
+            },
+            "allow_null": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value"
+        },
+        {
+            "key": "field_6070d5759cdc1",
+            "label": "Tabs",
+            "name": "tabs",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_6070d59c9cdc2",
+                    "label": "Tab title",
+                    "name": "tab_title",
+                    "type": "text",
+                    "instructions": "You can override the post title to show here as tab's title. \r\nIf you leave this empty, the original post's title will show as a title for this tab",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_60747127e7e10",
+                    "label": "Tab content",
+                    "name": "tab_content",
+                    "type": "button_group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_60749266d6b60",
+                                "operator": "!=",
+                                "value": "video_tabs"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "post_content": "Select a Pre-published post",
+                        "text_content": "Create a text content"
+                    },
+                    "allow_null": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value"
+                },
+                {
+                    "key": "field_6070d5ea9cdc3",
+                    "label": "Post",
+                    "name": "post_content",
+                    "type": "post_object",
+                    "instructions": "You have to have a pre-created post to add it here as a tab content",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_60747127e7e10",
+                                "operator": "==",
+                                "value": "post_content"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_60749266d6b60",
+                                "operator": "==",
+                                "value": "video_tabs"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": "",
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "object",
+                    "ui": 1
+                },
+                {
+                    "key": "field_607470e1e7e0f",
+                    "label": "Text",
+                    "name": "text_content",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_60747127e7e10",
+                                "operator": "==",
+                                "value": "text_content"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/uds-tabs"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1618331440
+}

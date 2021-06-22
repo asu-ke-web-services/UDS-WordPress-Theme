@@ -142,7 +142,7 @@
         {
             "key": "field_5fb83c73348c5",
             "label": "Button 1 Settings",
-            "name": "uds_button_1_settings",
+            "name": "uds_banner_button_1_settings",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -165,7 +165,7 @@
                 {
                     "key": "field_5fb83ce0348c6",
                     "label": "Text",
-                    "name": "button_one_text",
+                    "name": "uds_banner_button_one_text",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -184,7 +184,7 @@
                 {
                     "key": "field_5fb84041a310d",
                     "label": "URL",
-                    "name": "button_one_url",
+                    "name": "uds_banner_button_one_url",
                     "type": "url",
                     "instructions": "",
                     "required": 0,
@@ -202,7 +202,7 @@
         {
             "key": "field_5fb840e7c950b",
             "label": "Button 2 Settings",
-            "name": "uds_button_2_settings",
+            "name": "uds_banner_button_2_settings",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -225,7 +225,7 @@
                 {
                     "key": "field_5fb84101c950c",
                     "label": "Text",
-                    "name": "button_two_text",
+                    "name": "uds_banner_button_two_text",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -244,7 +244,7 @@
                 {
                     "key": "field_5fb8410dc950d",
                     "label": "URL",
-                    "name": "button_two_url",
+                    "name": "uds_banner_button_two_url",
                     "type": "url",
                     "instructions": "",
                     "required": 0,
@@ -277,5 +277,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Fields for creating a global banner across all pages, using the Banner widget area in the theme.",
-    "modified": 1616188552
+    "modified": 1619918030
 }

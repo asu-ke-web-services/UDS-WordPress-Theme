@@ -5,7 +5,7 @@
         {
             "key": "field_6034364b72b72",
             "label": "Alert Style",
-            "name": "alert_style",
+            "name": "uds_alert_style",
             "type": "button_group",
             "instructions": "",
             "required": 1,
@@ -29,7 +29,7 @@
         {
             "key": "field_606c9b92ea06c",
             "label": "Include Icon?",
-            "name": "alert_include_icon",
+            "name": "uds_alert_include_icon",
             "type": "true_false",
             "instructions": "Show the icon associated with the alert style?",
             "required": 0,
@@ -48,7 +48,7 @@
         {
             "key": "field_603436fa72b73",
             "label": "Alert Content",
-            "name": "alert_content",
+            "name": "uds_alert_content",
             "type": "wysiwyg",
             "instructions": "",
             "required": 1,
@@ -82,5 +82,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1617735490
+    "modified": 1619915478
 }

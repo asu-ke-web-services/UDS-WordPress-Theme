@@ -5,7 +5,7 @@
         {
             "key": "field_601db92f495ad",
             "label": "Text",
-            "name": "text",
+            "name": "uds_heading_text",
             "type": "textarea",
             "instructions": "",
             "required": 1,
@@ -24,7 +24,7 @@
         {
             "key": "field_601dab6d495ab",
             "label": "Heading Level",
-            "name": "level",
+            "name": "uds_heading_level",
             "type": "button_group",
             "instructions": "",
             "required": 1,
@@ -48,7 +48,7 @@
         {
             "key": "field_60466b92e86f9",
             "label": "Smaller Size",
-            "name": "smaller_size",
+            "name": "uds_heading_smaller_size",
             "type": "true_false",
             "instructions": "For longer titles, a smaller H1 can be used",
             "required": 0,
@@ -75,7 +75,7 @@
         {
             "key": "field_601dac1e495ac",
             "label": "Text Highlight",
-            "name": "text_highlight",
+            "name": "uds_heading_text_highlight",
             "type": "button_group",
             "instructions": "",
             "required": 0,
@@ -152,5 +152,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Fields for creating UDS compliant header tags, with customizable text and highlight colors.",
-    "modified": 1617062194
+    "modified": 1619917771
 }

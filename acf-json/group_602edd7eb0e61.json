@@ -22,7 +22,7 @@
         {
             "key": "field_602f0c315bfc0",
             "label": "Title",
-            "name": "title",
+            "name": "uds_card_title",
             "type": "text",
             "instructions": "",
             "required": 1,
@@ -41,7 +41,7 @@
         {
             "key": "field_602f0c412559a",
             "label": "Body Text",
-            "name": "body_text",
+            "name": "uds_card_body_text",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -77,7 +77,7 @@
         {
             "key": "field_602f0b39b4c29",
             "label": "Card Style",
-            "name": "card_style",
+            "name": "uds_card_style",
             "type": "button_group",
             "instructions": "",
             "required": 0,
@@ -101,7 +101,7 @@
         {
             "key": "field_602f0b5660bc4",
             "label": "Header Style",
-            "name": "header_style",
+            "name": "uds_card_header_style",
             "type": "select",
             "instructions": "",
             "required": 1,
@@ -127,7 +127,7 @@
         {
             "key": "field_602f0bafbc593",
             "label": "Image",
-            "name": "image",
+            "name": "uds_card_image",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -159,7 +159,7 @@
         {
             "key": "field_602f0beaa8637",
             "label": "Icon",
-            "name": "header_icon",
+            "name": "uds_card_header_icon",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -186,7 +186,7 @@
         {
             "key": "field_602f0c2622823",
             "label": "Card Orientation",
-            "name": "card_orientation",
+            "name": "uds_card_orientation",
             "type": "radio",
             "instructions": "",
             "required": 0,
@@ -209,10 +209,10 @@
         },
         {
             "key": "field_603d52a9b2db1",
-            "label": "Hover",
-            "name": "hover",
+            "label": "Clickable Card?",
+            "name": "uds_card_clickable",
             "type": "true_false",
-            "instructions": "Hover cards cannot have buttons, links, or tags.",
+            "instructions": "Clickable cards cannot have buttons, links, or tags.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -220,7 +220,7 @@
                 "class": "",
                 "id": ""
             },
-            "message": "Apply Hover Effect?",
+            "message": "Make card clickable?",
             "default_value": 0,
             "ui": 1,
             "ui_on_text": "",
@@ -254,7 +254,7 @@
         {
             "key": "field_602f0c6e30e8a",
             "label": "Start Date",
-            "name": "start_date",
+            "name": "uds_card_start_date",
             "type": "date_picker",
             "instructions": "",
             "required": 0,
@@ -271,7 +271,7 @@
         {
             "key": "field_602f0c78e6848",
             "label": "Start Time",
-            "name": "start_time",
+            "name": "uds_card_start_time",
             "type": "time_picker",
             "instructions": "",
             "required": 0,
@@ -287,7 +287,7 @@
         {
             "key": "field_602f0c89e480e",
             "label": "End Time",
-            "name": "end_time",
+            "name": "uds_card_end_time",
             "type": "time_picker",
             "instructions": "",
             "required": 0,
@@ -303,7 +303,7 @@
         {
             "key": "field_602f0c9880d9e",
             "label": "Location",
-            "name": "location",
+            "name": "uds_card_location",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -347,7 +347,7 @@
         {
             "key": "field_602f0cc0abbc7",
             "label": "Buttons",
-            "name": "buttons",
+            "name": "uds_card_multi_buttons",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -366,7 +366,7 @@
                 {
                     "key": "field_605260e337e2b",
                     "label": "Card Buttons",
-                    "name": "card_buttons",
+                    "name": "uds_card_buttons",
                     "type": "clone",
                     "instructions": "",
                     "required": 0,
@@ -414,7 +414,7 @@
         {
             "key": "field_602f0e97702ae",
             "label": "Links",
-            "name": "links",
+            "name": "uds_card_multi_links",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -433,7 +433,7 @@
                 {
                     "key": "field_602f0eaece055",
                     "label": "Text",
-                    "name": "link_text",
+                    "name": "uds_card_link_text",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -452,7 +452,7 @@
                 {
                     "key": "field_602f0ebb35993",
                     "label": "url",
-                    "name": "link_url",
+                    "name": "uds_card_link_url",
                     "type": "url",
                     "instructions": "",
                     "required": 0,
@@ -468,7 +468,7 @@
                 {
                     "key": "field_602f0ec7cdd06",
                     "label": "External Link",
-                    "name": "external_link",
+                    "name": "uds_card_external_link",
                     "type": "true_false",
                     "instructions": "",
                     "required": 0,
@@ -514,7 +514,7 @@
         {
             "key": "field_602f0f084ce05",
             "label": "Tags",
-            "name": "tags",
+            "name": "uds_card_multi_tags",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -533,7 +533,7 @@
                 {
                     "key": "field_602f0f20874f6",
                     "label": "Tag Text",
-                    "name": "tag_text",
+                    "name": "uds_card_tag_text",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -552,7 +552,7 @@
                 {
                     "key": "field_602f0f35bc049",
                     "label": "Tag URL",
-                    "name": "tag_url",
+                    "name": "uds_card_tag_url",
                     "type": "url",
                     "instructions": "",
                     "required": 0,

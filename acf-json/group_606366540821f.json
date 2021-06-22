@@ -5,7 +5,7 @@
         {
             "key": "field_6063588fd9346",
             "label": "Show External Link Icon?",
-            "name": "menu_external_link",
+            "name": "uds_menu_external_link",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -24,7 +24,7 @@
         {
             "key": "field_606cf43547783",
             "label": "Open in new tab?",
-            "name": "menu_target_blank",
+            "name": "uds_menu_target_blank",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -66,5 +66,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Fields for allowing external link icons, and opening links in a new tab, on all menu items.",
-    "modified": 1617915532
+    "modified": 1619918133
 }

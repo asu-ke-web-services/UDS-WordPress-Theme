@@ -21,7 +21,7 @@
         {
             "key": "field_602c64c2f0dcd",
             "label": "Quote Text",
-            "name": "quote_text",
+            "name": "uds_blockquote_quote_text",
             "type": "textarea",
             "instructions": "The actual text of the quote.",
             "required": 1,
@@ -40,7 +40,7 @@
         {
             "key": "field_602c6539f0dce",
             "label": "Name",
-            "name": "name",
+            "name": "uds_blockquote_name",
             "type": "text",
             "instructions": "This is the person who you are quoting",
             "required": 1,
@@ -59,7 +59,7 @@
         {
             "key": "field_602c658af0dcf",
             "label": "Description",
-            "name": "description",
+            "name": "uds_blockquote_description",
             "type": "text",
             "instructions": "Optional text for a person's title, or other information",
             "required": 0,
@@ -94,7 +94,7 @@
         {
             "key": "field_602c6279c09d8",
             "label": "Image",
-            "name": "quote_image",
+            "name": "uds_blockquote_image",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -113,7 +113,7 @@
         {
             "key": "field_602c62bcc09d9",
             "label": "Image Source",
-            "name": "image_source",
+            "name": "uds_blockquote_image_source",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -145,7 +145,7 @@
         {
             "key": "field_603fef3dcbb40",
             "label": "Image Side",
-            "name": "image_side",
+            "name": "uds_blockquote_image_side",
             "type": "button_group",
             "instructions": "",
             "required": 0,
@@ -191,7 +191,7 @@
         {
             "key": "field_602c63e7c09db",
             "label": "Accent Color",
-            "name": "accent_none",
+            "name": "uds_blockquote_accent_none",
             "type": "button_group",
             "instructions": "Accent color for the large quotations marks (if visible), as well as the separator bar on mobile view.",
             "required": 0,
@@ -222,7 +222,7 @@
         {
             "key": "field_603422ad2f087",
             "label": "Accent Color",
-            "name": "accent_light",
+            "name": "uds_blockquote_accent_light",
             "type": "button_group",
             "instructions": "Accent color for large quotation marks and content dividers",
             "required": 0,
@@ -258,7 +258,7 @@
         {
             "key": "field_60341a9fc2333",
             "label": "Accent Color",
-            "name": "accent_medium",
+            "name": "uds_blockquote_accent_medium",
             "type": "button_group",
             "instructions": "Accent color for large quotation marks and content dividers",
             "required": 0,
@@ -293,7 +293,7 @@
         {
             "key": "field_60341aa5c2334",
             "label": "Accent Color",
-            "name": "accent_dark",
+            "name": "uds_blockquote_accent_dark",
             "type": "button_group",
             "instructions": "Accent color for large quotation marks and content dividers",
             "required": 0,
@@ -328,7 +328,7 @@
         {
             "key": "field_602c637dc09da",
             "label": "Background Color",
-            "name": "background_color",
+            "name": "uds_blockquote_background_color",
             "type": "select",
             "instructions": "Choose a UDS-approved gray background color. This may affect your accent color options.",
             "required": 0,
@@ -355,7 +355,7 @@
         {
             "key": "field_603ffa83a5fbd",
             "label": "Add Space",
-            "name": "add_space",
+            "name": "uds_blockquote_add_space",
             "type": "true_false",
             "instructions": "Add space around the content?",
             "required": 0,
@@ -389,5 +389,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Fields for creating a UDS compliant block quote, with options for adding an image and customizing colors",
-    "modified": 1616188110
+    "modified": 1619913520
 }

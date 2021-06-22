@@ -5,7 +5,7 @@
         {
             "key": "field_5f334612ad385",
             "label": "CTA Button",
-            "name": "menu_cta_button",
+            "name": "uds_menu_cta_button",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -24,7 +24,7 @@
         {
             "key": "field_5f337fdca3842",
             "label": "CTA Button Color",
-            "name": "menu_cta_button_color",
+            "name": "uds_menu_cta_button_color",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -74,5 +74,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Fields for customizing Call to Action buttons that appear in the main navigation menu.",
-    "modified": 1617127069
+    "modified": 1619918103
 }

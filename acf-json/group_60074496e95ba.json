@@ -5,7 +5,7 @@
         {
             "key": "field_6007449f54b72",
             "label": "Hide  Page Title?",
-            "name": "hide_page_title",
+            "name": "uds_hide_page_title",
             "type": "true_false",
             "instructions": "",
             "required": 0,

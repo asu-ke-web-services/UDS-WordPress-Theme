@@ -5,7 +5,7 @@
         {
             "key": "field_60522a8361f39",
             "label": "Label and Link",
-            "name": "button_link",
+            "name": "uds_button_link",
             "type": "link",
             "instructions": "",
             "required": 0,
@@ -20,7 +20,7 @@
         {
             "key": "field_601e39a0afff2",
             "label": "External Link?",
-            "name": "external_link",
+            "name": "uds_button_external_link",
             "type": "true_false",
             "instructions": "Adds appropriate \"rel\" values for links that leave the 'asu.edu' domain.",
             "required": 0,
@@ -39,7 +39,7 @@
         {
             "key": "field_601f031d80f7e",
             "label": "Color",
-            "name": "button_color",
+            "name": "uds_button_color",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -66,7 +66,7 @@
         {
             "key": "field_601f61b7ff690",
             "label": "Size",
-            "name": "button_size",
+            "name": "uds_button_size",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -92,7 +92,7 @@
         {
             "key": "field_602c30da61fbb",
             "label": "Button Icon",
-            "name": "icon",
+            "name": "uds_button_icon",
             "type": "text",
             "instructions": "Enter the base name of a FontAwesome icon (ex. for 'fa-info', just enter the word 'info')",
             "required": 0,
@@ -126,5 +126,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Fields for creating a UDS compliant button links with customizable color, size, and icon.",
-    "modified": 1616619261
+    "modified": 1619915616
 }

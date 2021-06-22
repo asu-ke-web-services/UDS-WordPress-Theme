@@ -21,7 +21,7 @@
         {
             "key": "field_60621cb77aa3b",
             "label": "Image",
-            "name": "image",
+            "name": "uds_overlay_card_image",
             "type": "image",
             "instructions": "",
             "required": 1,
@@ -45,7 +45,7 @@
         {
             "key": "field_606223da7aa3e",
             "label": "Hover Image",
-            "name": "hover_image",
+            "name": "uds_overlay_card_hover_image",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -92,7 +92,7 @@
         {
             "key": "field_60621c957aa3a",
             "label": "Title",
-            "name": "title",
+            "name": "uds_overlay_card_title",
             "type": "text",
             "instructions": "",
             "required": 1,
@@ -111,7 +111,7 @@
         {
             "key": "field_6078d8ad123e4",
             "label": "Description",
-            "name": "description",
+            "name": "uds_overlay_card_description",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -146,7 +146,7 @@
         {
             "key": "field_60621d4b7aa3d",
             "label": "Button",
-            "name": "button",
+            "name": "uds_overlay_card_button",
             "type": "clone",
             "instructions": "",
             "required": 0,
@@ -182,5 +182,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1619046512
+    "modified": 1619917862
 }

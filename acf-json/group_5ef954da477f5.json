@@ -21,7 +21,7 @@
         {
             "key": "field_5ef9553c97988",
             "label": "Hero Size",
-            "name": "hero_size",
+            "name": "uds_hero_size",
             "type": "select",
             "instructions": "Choose",
             "required": 0,
@@ -47,7 +47,7 @@
         {
             "key": "field_60527e8bb6c34",
             "label": "Media Source",
-            "name": "media_source",
+            "name": "uds_hero_media_source",
             "type": "button_group",
             "instructions": "",
             "required": 0,
@@ -70,7 +70,7 @@
         {
             "key": "field_5ef9561897989",
             "label": "Media URL",
-            "name": "hero_asset_url",
+            "name": "uds_hero_asset_url",
             "type": "url",
             "instructions": "Enter a valid URL to the hero media",
             "required": 0,
@@ -94,7 +94,7 @@
         {
             "key": "field_60527e5bb6c33",
             "label": "Image",
-            "name": "hero_asset_file",
+            "name": "uds_hero_asset_file",
             "type": "image",
             "instructions": "Choose an image from the media library",
             "required": 0,
@@ -133,7 +133,7 @@
         {
             "key": "field_60663bf1e6be1",
             "label": "Video",
-            "name": "video",
+            "name": "uds_hero_video",
             "type": "file",
             "instructions": "Choose a video from the media library. (only mp4 is allowed)",
             "required": 0,
@@ -176,7 +176,7 @@
         {
             "key": "field_5ef956ca9798a",
             "label": "Title Text",
-            "name": "hero_title",
+            "name": "uds_hero_title",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -195,7 +195,7 @@
         {
             "key": "field_602adc094d066",
             "label": "Title Text Color",
-            "name": "title_color",
+            "name": "uds_hero_title_color",
             "type": "select",
             "instructions": "Text color for title with no highlighting, or single word highlighting.",
             "required": 0,
@@ -220,7 +220,7 @@
         {
             "key": "field_605bcd7bcf1be",
             "label": "Apply Highlighting?",
-            "name": "apply_highlighting",
+            "name": "uds_hero_apply_highlighting",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -239,7 +239,7 @@
         {
             "key": "field_5f5ac3e5eaa9e",
             "label": "Title Highlight Color",
-            "name": "hero_highlight",
+            "name": "uds_hero_highlight",
             "type": "select",
             "instructions": "Choose a Web 2.0 highlight style to be applied to the hero title text",
             "required": 0,
@@ -273,7 +273,7 @@
         {
             "key": "field_605a7e752fb32",
             "label": "Title Highlight Type",
-            "name": "title_highlight_type",
+            "name": "uds_hero_title_highlight_type",
             "type": "select",
             "instructions": "Apply highlight to the entire title or a specific word",
             "required": 0,
@@ -306,7 +306,7 @@
         {
             "key": "field_605a7929986d0",
             "label": "Single Word Highlight",
-            "name": "single_word_highlight",
+            "name": "uds_hero_single_word_highlight",
             "type": "text",
             "instructions": "Enter the exact word that you want to highlight, including any capitalization.",
             "required": 0,
@@ -338,7 +338,7 @@
         {
             "key": "field_5ef956e49798b",
             "label": "Body Text",
-            "name": "hero_text",
+            "name": "uds_hero_text",
             "type": "textarea",
             "instructions": "Enter a short text blurb to be displayed below the Hero Title. (optional)",
             "required": 0,
@@ -373,7 +373,7 @@
         {
             "key": "field_605930976d34b",
             "label": "Hero CTA Buttons",
-            "name": "hero_cta_buttons",
+            "name": "uds_hero_cta_buttons",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -415,7 +415,7 @@
         {
             "key": "field_605e64882fb32",
             "label": "Call to Action URL",
-            "name": "hero_call_to_action_url",
+            "name": "uds_hero_call_to_action_url",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -431,7 +431,7 @@
         {
             "key": "field_605e64ac2fb33",
             "label": "Call to Action Text",
-            "name": "hero_call_to_action_text",
+            "name": "uds_hero_call_to_action_text",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -450,7 +450,7 @@
         {
             "key": "field_605e64c62fb34",
             "label": "Call to Action Color",
-            "name": "call_to_action_color",
+            "name": "uds_hero_call_to_action_color",
             "type": "button_group",
             "instructions": "",
             "required": 0,

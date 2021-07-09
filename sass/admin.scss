@@ -51,3 +51,13 @@ $warning-color: #F99;
 .editor-styles-wrapper svg.svg-inline--fa {
 	vertical-align: -.125rem;
 }
+
+/*-------------------------------------------------------------------
+3. UDS Grid Links, Admin
+--------------------------------------------------------------------*/
+// Selecting this block from the Gutenberg editor poses a challenge
+// with the wide target of each box functioning as an actual link.
+// This should prevent accidentally activating a link from the grid.
+.acf-block-preview .uds-grid-links a {
+	pointer-events: none;
+}

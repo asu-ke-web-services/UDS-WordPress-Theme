@@ -47,14 +47,15 @@ function my_acf_blocks_init() {
 
 		// Array of block folders to use. Each must have a 'register.php' file.
 		$block_includes = array(
-			'/blockquote', // Combination of UDS block quote and testimonial.
+			'/blockquote',              // Combination of UDS block quote and testimonial.
 			'/alert',
-			'/button', // Button block for UDS theme.
-			'/cards', // UDS Cards.
-			'/content-sections', // Miscellaneous content sections.
-			'/headings', // A UDS Headings block.
-			'/overlay-card', // UDS Program Cards.
-			'/background-section', // UDS Background section.
+			'/button',                  // Button block for UDS theme.
+			'/cards',                   // UDS Cards.
+			'/content-sections',        // Miscellaneous content sections.
+			'/headings',                // A UDS Headings block.
+			'/overlay-card',            // UDS Program Cards.
+			'/background-section',      // UDS Background section.
+			'/grid-links',              // UDS Grid Links.
 		);
 
 		// Loop through array items and include each register file.

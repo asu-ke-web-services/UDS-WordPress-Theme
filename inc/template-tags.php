@@ -159,44 +159,45 @@ if ( ! function_exists( 'uds_wp_body_attributes' ) ) {
 	}
 }
 
-if ( ! function_exists( 'get_primary_category_id' ) ) {
-	/**
-	 * Get the primary category id
-	 *
-	 * @param int $post_id the ID of the current post.
-	 * @param int $category the ID of the post categories.
-	 */
-	function get_primary_category_id( $post_id, $category ) {
-		$prm_term = '';
-		if ( class_exists( 'WPSEO_Primary_Term' ) ) {
-				$wpseo_primary_term = new WPSEO_Primary_Term( $category, $post_id );
-				$prm_term = $wpseo_primary_term->get_primary_term();
-		}
-		if ( ! is_object( $wpseo_primary_term ) || empty( $prm_term ) ) {
-				$term = wp_get_post_terms( $post_id, $category );
-			if ( isset( $term ) && ! empty( $term ) ) {
-					return $term[0]->term_id;
-			} else {
-					return '';
-			}
-		}
-		return $wpseo_primary_term->get_primary_term();
-	}
-}
-
 if ( ! function_exists( 'uds_assign_featured_image' ) ) {
 	/**
-	 * Assign default featured image to each post
-	 * Get the first core/image block and assign it as a featured image if the field is empty
-	 * if no core/image then get the featured image of the primary category and assign it to the post .
+	 * Assign default featured image to each post.
+	 *
+	 * We are looking for suitable images in the following locations in this specific order.
+	 *  1. A hero image from the post.
+	 *  2. The first example of a core/image block in the post.
+	 *  3. A hero image assigned to the primary category if Yoast is present.
+	 *  4. A hero image from the first category from get_the_categories.
+	 *
+	 * Note: There is always a category assigned to each post, so by assigning one hero image
+	 * to the default category for your WP install, you can ensure that all posts have featured images.
+	 * The "default" category setting can be found in Settings-->Writing
+	 *
+	 * TODO: Check the post for an image assigned to a non-image block like a card, the content-overlap block, etc.
 	 */
 	function uds_assign_featured_image() {
+
 		global $post;
 		$attached_image_id = '';
-		$primary_category = get_primary_category_id( $post->ID, 'category' );
-		// Scan the post content, identify the first core/image block found and assign to featured image.
-		if ( ! has_post_thumbnail( $post->ID ) ) {
+
+		// Check to see if the post object exists and if there is a featured image.
+		// Post object won't exist at all until the first save.
+		if ( ( is_object( $post ) ) && ( ! has_post_thumbnail( $post->ID ) ) ) {
+
+			// Step 1. Look at the ACF hero to see if there's a hero image.
+			$hero_asset_data = '';
+			$hero_asset_data = get_field( 'uds_story_hero_background_image', $post->ID );
+
+			// If we found a suitable image assign it as the featured image.
+			// Then bail early.
+			if ( ! empty( $hero_asset_data ) ) {
+				set_post_thumbnail( $post->ID, $hero_asset_data['ID'] );
+				return;
+			}
+
+			// Step 2. Scan the post content, identify the first core/image block found and assign to featured image.
 			if ( has_blocks( $post->post_content ) ) {
+
 				$blocks = parse_blocks( $post->post_content );
 				foreach ( $blocks as $value ) {
 					if ( 'core/image' == $value['blockName'] ) {
@@ -206,21 +207,47 @@ if ( ! function_exists( 'uds_assign_featured_image' ) ) {
 				}
 			}
 
-			if ( $attached_image_id ) {
+			// If we found a suitable image assign it as the featured image.
+			// Then bail early.
+			if ( ! empty( $attached_image_id ) ) {
 				set_post_thumbnail( $post->ID, $attached_image_id );
-			} elseif ( $primary_category ) {
-
-				$primary_category = get_category( $primary_category );
-
-				$hero_asset_data = get_field( 'hero_asset_file', $primary_category );
-
-				set_post_thumbnail( $post->ID, $hero_asset_data['ID'] );
-
+				return;
 			}
+
+			// Step 3 and 4: Let's look in the assigned categories for a suitable image.
+			$primary_category_id = '';
+
+			// Step 3: Look for a "primary" category from Yoast SEO in case there is one selected.
+			// If Yoast is active and there are multiple categories, there will always be one selected.
+			if ( function_exists( 'yoast_get_primary_term_id' ) ) {
+
+				// Returns false if the function is available, but there is only one category.
+				$primary_category_id = yoast_get_primary_term_id( 'category', $post->ID );
+			}
+
+			// Step 4: No category determined as of yet. Find the first one in the returned WP_Term array.
+			if ( empty( $primary_category_id ) ) {
+				$all_categories = '';
+				$all_categories = get_the_category( $post->ID );
+				$primary_category_id = $all_categories[0]->term_id;
+			}
+
+			// Get the ACF image field assigned to the selected category and assign it to the post.
+			if ( $primary_category_id ) {
+				$primary_category_term = get_term( $primary_category_id );
+				$hero_asset_data = get_field( 'hero_asset_file', $primary_category_term );
+			}
+
+			// Assign the hero image from the category page.
+			if ( ! empty( $hero_asset_data ) ) {
+				set_post_thumbnail( $post->ID, $hero_asset_data['ID'] );
+			}
+
+			// OK, fine... there's really no suitable image found here.
+
 		}
 
 	}
-	add_action( 'the_post', 'uds_assign_featured_image' );
 	add_action( 'save_post', 'uds_assign_featured_image' );
 	add_action( 'draft_to_publish', 'uds_assign_featured_image' );
 	add_action( 'new_to_publish', 'uds_assign_featured_image' );
